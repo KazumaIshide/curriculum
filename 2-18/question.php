@@ -21,25 +21,41 @@ $name = $_POST['my_name'];
 <form action="answer.php" method="post">
 <h2>①ネットワークのポート番号は何番？</h2>
 <!--③ 問題のradioボタンを「foreach」を使って作成する-->
-<input type="radio" name="portnum" value="80">80
-<input type="radio" name="portnum" value="22">22
-<input type="radio" name="portnum" value="20">20
-<input type="radio" name="portnum" value="21">21
+<?php
+$array = [80, 22, 20, 21];
+foreach ($array as $value){
+    echo '<span>';
+    echo '<input type="radio" name="portnum" value="$value">';
+    echo $value;
+    echo '</span>';
+}
+?>
 
 <h2>②Webページを作成するための言語は？</h2>
 <!--③ 問題のradioボタンを「foreach」を使って作成する-->
-<input type="radio" name="lang" value="PHP">PHP
-<input type="radio" name="lang" value="Python">Python
-<input type="radio" name="lang" value="JAVA">JAVA
-<input type="radio" name="lang" value="HTML">HTML
+<?php
+$array = ['PHP', 'Python', 'JAVA', 'HTML'];
+foreach($array as $value){
+    echo '<span>';
+    echo '<input type="radio" name="lang" value="$value">';
+    echo $value;
+    echo '</span>';
+}
+?>
 
 <h2>③MySQLで情報を取得するためのコマンドは？</h2>
 <!--③ 問題のradioボタンを「foreach」を使って作成する-->
-<input type="radio" name="command" value="join">join
-<input type="radio" name="command" value="select">select
-<input type="radio" name="command" value="insert">insert
-<input type="radio" name="command" value="update">update
-</br>
+<?php
+$array = ['join', 'select', 'insert', 'update'];
+foreach($array as $value){
+    echo '<span>';
+    echo '<input type="radio" name="command" value="$value">';
+    echo $value;
+    echo '</span>';
+}
+?>
+<br>
+<br>
 
 <!--問題の正解の変数と名前の変数を[answer.php]に送る-->
 <input type="submit" value="回答する"/>
