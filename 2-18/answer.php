@@ -9,7 +9,7 @@
 <body>
 <?php 
 //[question.php]から送られてきた名前の変数、選択した回答、問題の答えの変数を作成
-$name = $_POST['my_name'];
+$my_name = $_POST['my_name'];
 $portnum = $_POST['portnum'];
 $lang = $_POST['lang'];
 $command = $_POST['command'];
@@ -17,7 +17,7 @@ $command = $_POST['command'];
 ?>
 
 <br>
-<p><!--POST通信で送られてきた名前を表示--><?php echo $name ;?>さんの結果は・・・？</p>
+<p><!--POST通信で送られてきた名前を表示--><?php echo $my_name ;?>さんの結果は・・・？</p>
 <p>①の答え</p>
 <!--作成した関数を呼び出して結果を表示-->
 <?php
